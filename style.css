@@ -1,0 +1,892 @@
+@charset "utf-8";
+
+/*
+Theme Name: Alternative Second
+Description: カスタムのプロトタイプ
+Theme URI: テーマの URL
+Author: Alternative Design
+Author URI: http://www.alternative-design.jp
+Version: 0
+License: ライセンス
+License URI: ライセンスの URL
+*/
+
+
+/****************************************
+共通テーマ
+****************************************/
+
+/* ここに共通で使用する要素を定義 */
+
+
+html {
+	font-size: 62.5%;
+	color:#333;
+}
+
+a {
+	color:#333;
+}
+
+a:hover {
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	-ms-filter: "alpha( opacity=60 )";
+	/*background:none!important;*/
+}
+
+a:hover img {
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	-ms-filter: "alpha( opacity=60 )";
+	background:none!important;
+}
+
+.clearfix:after {
+	content: "";
+	display:block;
+	clear:both;
+	height: 0;
+  	visibility: hidden;
+  }
+
+.clearfix {
+  min-height: 1px;
+}
+ 
+* html .clearfix {
+  height: 1px;
+  /*¥*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+.tel {
+	text-decoration: underline;
+}
+
+/*php読み込みの空白除去*/
+.defs{
+  display: none;
+}
+
+body {
+	font-family: "futura-pt",sans-serif;
+	font-style: oblique;
+	font-size: 14px;
+	font-size:1.4rem;
+	letter-spacing: 0.08em;
+	height: 100%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+#container {
+	line-height: 1.8em;
+}
+
+/*li#menu-item-64 a,*//*Work*/
+li#menu-item-63 a,/*Web*/
+li#menu-item-59 a,/*Graphic*/
+li#menu-item-62 a,/*Photograph*/
+li#menu-item-60 a,/*Movie*/
+li#menu-item-61 a/*Other*/
+{
+	pointer-events: none;
+	text-decoration: line-through;
+}
+
+
+
+
+
+/****************************************
+スマホ用
+****************************************/
+
+
+/* header */
+
+
+header {
+	padding: 10% 5% 10% 10%;
+}
+
+#head-logo svg {
+	width: 100px;
+	height: 22px;
+}
+
+#g-navi-wrapper {
+	position: relative;
+}
+
+.drawer-nav {
+	box-sizing: border-box;
+	padding: 10% 5%;
+}
+
+#g-navi > li {
+	line-height: 1em;
+	margin-bottom: 10%;
+	letter-spacing: -1em;
+}
+
+#g-navi li:last-child {
+	margin-bottom: 0;
+}
+
+#g-navi li a {
+	letter-spacing: 0.02em;
+}
+
+#g-navi li#menu-item-64 > a {
+	display: inline-block;
+	width: 20%;
+}
+
+.sub-menu {
+	display: inline-block;
+	width: 80%;
+}
+
+.drawer--right .sub-menu li {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom: 6%;
+}
+
+.drawer--right .sub-menu li a {
+	color: #aaa;
+}
+
+.drawer--right.drawer-open .sub-menu li {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom: 6%;
+}
+
+.drawer--right.drawer-open .sub-menu li a {
+	color: #aaa;
+}
+
+#head-info {
+	padding-top: 10%;
+	margin-top: 10%;
+	border-top: 1px solid #333;
+	width: 40%;
+}
+
+#head-info h1 {
+	margin-bottom: 5%;
+}
+
+#head-info-01 {
+	display: block;
+	margin-bottom: 20%;
+}
+
+#head-info-01 li {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+#head-sns li {
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: 0.02em;
+	margin-right: 8%;
+}
+
+#head-sns li:last-child {
+	margin-right: 0;
+}
+
+#head-sns svg {
+	width: 20px;
+	height: 20px;
+	fill: #333;
+}
+
+
+
+
+/* footer */
+
+
+
+#pageTop {
+	text-align: center;
+	position: relative;
+	margin: 20% 0;
+}
+
+#pageTop a {
+	display: inline-block;
+	font-size: 10px;
+	font-size: 1rem;
+}
+
+#pageTop svg {
+	width: 24px;
+	height: 13px;
+	fill: #333;
+	margin-bottom: 10%;
+}
+
+footer {
+	text-align: center;
+	padding: 10% 0;
+}
+
+footer small {
+	font-size: 10px;
+	font-size: 1rem;
+}
+
+
+
+
+/* index */
+
+#inner {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.post-list-wrapper h1 {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.post-list li {
+	width: 100%;
+	margin-bottom: 20%;
+}
+
+.post-list li img {
+	margin-bottom: 10%;
+}
+
+.post-list li h2, .post-list li h3 {
+	margin-bottom: 5%;
+	line-height: 1.4em;
+}
+
+.post-list li p {
+	color: #999;
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom: 6%;
+}
+
+
+
+
+/* post-page */
+
+
+#post-page h1 {
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin-bottom: 10%;
+}
+
+#post-date {
+	font-size: 12px;
+	font-size: 1.2rem;
+	color: #999;
+	margin-bottom: 5%;
+}
+
+#post-page-content {
+	margin-bottom: 10%;
+	text-align: justify;
+}
+
+.category {
+	font-size: 10px;
+	font-size: 1rem;
+	line-height: 1em;
+	padding: 1% 2%;
+	border: 1px solid #333;
+}
+
+
+
+
+
+/*
+pager
+paginate_links
+*/
+
+#pager {
+	margin-top: 10%;
+	text-align: center;
+}
+
+#pager ul {
+	letter-spacing: -1em;
+}
+
+#pager ul li {
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: 0.02em;
+	margin-right: 5%;
+}
+
+#pager ul li:last-child {
+	margin-right: 0;
+}
+
+#pager ul li a {
+	color: #999;
+}
+
+#pager ul li .current {
+	padding-bottom: 3px;
+	border-bottom: 1px solid #000;
+}
+
+
+
+
+
+/* about */
+
+
+#page-title {
+	position: relative;
+}
+
+#page-title h2 {
+	display: inline-block;
+	position: absolute;
+	width: 20%;
+	border-bottom: 1px solid #333;
+	top: 0;
+	left: 0;
+	margin: 0 0 0 95%;
+}
+
+.page-contents {
+	margin-bottom: 20%;
+}
+
+.page-contents:last-child {
+	margin-bottom: 0;
+}
+
+.page-contents h1 {
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin-bottom: 10%;
+}
+
+.page-contents h2 {
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin-bottom: 10%;
+}
+
+.page-contents p {
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-align: justify;
+}
+
+#about-first {
+	padding-top: 20%;
+}
+
+#about-logo-wrapper {
+	margin-bottom: 20%;
+}
+
+#about-mark {
+	display: block;
+	width: 130px;
+	height: 168px;
+	margin: 0 auto;
+}
+
+#about-logo {
+	display: block;
+	width: 175px;
+	height: 38px;
+	margin: 0 auto;
+}
+
+#about-first p {
+	color: #999;
+}
+
+#about-second ul {
+	letter-spacing: -1em;
+	margin-bottom: 5%;
+}
+
+#about-second ul li {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: -1em;
+	margin-right: 6%;
+	position: relative;
+}
+
+#about-second ul li h3 {
+	letter-spacing: 0.02em;
+}
+
+#about-second ul svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 6%;
+	letter-spacing: 0.02em;
+	width: 22px;
+	height: 27px;
+}
+
+#about-second ul li:last-child {
+	margin-right: 0;
+}
+
+#about-second ul li:last-child h3 {
+	margin-right: 0;
+}
+
+#about-third h3 span {
+	display: block;
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom: 5%;
+	color: #999;
+}
+
+
+
+
+
+/* work */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************
+PC用
+****************************************/
+@media screen and (min-width: 800px) {
+
+
+
+
+/* header */
+
+
+header {
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 25%;
+	height: 100%;
+	padding: 5%;
+	z-index: 1000;
+	overflow: auto;
+}
+
+#head-logo {
+	margin-bottom: 20%;
+}
+
+#head-logo svg {
+	width: 100px;
+	height: 22px;
+}
+
+#g-navi-wrapper {
+	position: relative;
+	height: 100%;
+}
+
+.drawer-nav {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+#g-navi > li {
+	line-height: 1em;
+	margin-bottom: 15%;
+	letter-spacing: -1em;
+}
+
+#g-navi li:last-child {
+	margin-bottom: 0;
+}
+
+#g-navi li a {
+	letter-spacing: 0.02em;
+}
+
+#g-navi li#menu-item-64 > a {
+	display: inline-block;
+	width: 100%;
+}
+
+.sub-menu {
+	display: block;
+	width: 100%;
+	padding-top: 6%;
+}
+
+/*.drawer--right.drawer-open .sub-menu li {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom: 60%;
+}
+
+.drawer--right.drawer-open .sub-menu li a {
+	color: #aaa;
+}*/
+
+.drawer--right .sub-menu li {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom: 6%;
+}
+
+.drawer--right .sub-menu li a {
+	color: #aaa;
+}
+
+
+#head-info {
+	padding-top: 15%;
+	margin-top: 15%;
+	border-top: 1px solid #333;
+	width: 80%;
+}
+
+#head-info h1 {
+	margin-bottom: 5%;
+}
+
+#head-info-01 {
+	display: block;
+	margin-bottom: 20%;
+}
+
+#head-info-01 li {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+#head-sns li {
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: 0.02em;
+	margin-right: 5%;
+}
+
+#head-sns li:last-child {
+	margin-right: 0;
+}
+
+#head-sns svg {
+	width: 20px;
+	height: 20px;
+	fill: #333;
+}
+
+
+
+
+/* footer */
+
+
+
+#pageTop {
+	text-align: center;
+	position: relative;
+	margin: 20% 0 0;
+}
+
+#pageTop a {
+	display: inline-block;
+	font-size: 10px;
+	font-size: 1rem;
+}
+
+#pageTop svg {
+	width: 24px;
+	height: 13px;
+	fill: #333;
+	margin-bottom: 10%;
+}
+
+footer {
+	display: block;
+	width: 75%;
+	padding: 5% 0;
+	margin-left: 20%;
+	text-align: center;
+}
+
+footer small {
+	font-size: 10px;
+	font-size: 1rem;
+}
+
+
+
+
+
+/* index */
+
+
+#container {
+	display: block;
+	width: 75%;
+	margin-left: 20%;
+	padding-top: 4.5%;
+}
+
+#inner {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.post-list-wrapper h1 {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+.post-list {
+	width: 100%;
+	margin: 0 auto;
+	letter-spacing: -1em;
+}
+
+.post-list li {
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: 0.02em;
+	width: 40%;
+	margin: 0 20% 20% 0;
+}
+
+.post-list li:nth-child(2n) {
+	margin-right: 0;
+}
+
+.post-list li:nth-last-child(2), .post-list li:last-child {
+	margin-bottom: 0;
+}
+
+.post-list li img {
+	margin-bottom: 10%;
+}
+
+.post-list li h2, .post-list li h3 {
+	margin-bottom: 5%;
+	line-height: 1.4em;
+}
+
+.post-list li p {
+	color: #999;
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom: 6%;
+}
+
+
+
+
+
+
+
+
+/* post-page */
+
+
+#post-page {
+	width: 70%;
+	margin: 0 auto;
+	line-height: 1.8em;
+}
+
+#post-page h1 {
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin-bottom: 10%;
+}
+
+#post-date {
+	font-size: 12px;
+	font-size: 1.2rem;
+	color: #999;
+	margin-bottom: 5%;
+}
+
+#post-page-content {
+	margin-bottom: 10%;
+	text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+/* about */
+
+
+#page-title {
+	display: none;
+	position: relative;
+}
+
+#page-title h2 {
+	display: inline-block;
+	position: absolute;
+	width: 15%;
+	border-bottom: 1px solid #333;
+	top: 0;
+	left: auto;
+	margin: 0 0 0 95%;
+	text-align: right;
+}
+
+.page-contents {
+	width: 70%;
+	margin: 0 auto 15%;
+}
+
+.page-contents:last-child {
+	margin-bottom: 0;
+}
+
+.page-contents h1 {
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin-bottom: 4%;
+}
+
+.page-contents h2 {
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin-bottom: 6%;
+}
+
+.page-contents p {
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-align: justify;
+}
+
+#about-first {
+	padding-top: 0%;
+}
+
+#about-logo-wrapper {
+	margin-bottom: 8%;
+}
+
+#about-mark {
+	display: inline-block;
+	vertical-align: middle;
+	width: 62px;
+	height: 49px;
+	margin: 0 20px 0 0;
+}
+
+#about-logo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 175px;
+	height: 38px;
+	margin: 0 0 0 0;
+}
+
+#about-first p {
+	color: #999;
+}
+
+#about-second ul {
+	letter-spacing: -1em;
+	margin-bottom: 5%;
+}
+
+#about-second ul li {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: -1em;
+	margin-right: 6%;
+	position: relative;
+}
+
+#about-second ul li h3 {
+	letter-spacing: 0.02em;
+}
+
+#about-second ul svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 6%;
+	letter-spacing: 0.02em;
+	width: 22px;
+	height: 27px;
+}
+
+#about-second ul li:last-child {
+	margin-right: 0;
+}
+
+#about-second ul li:last-child h3 {
+	margin-right: 0;
+}
+
+#about-third h3 span {
+	display: block;
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-bottom: 5%;
+	color: #999;
+}
+
+
+
+
+}
