@@ -478,10 +478,28 @@ paginate_links
 /* work */
 
 
+#work-category {
+	margin-bottom: 10%;
+}
 
+#work-info dl {
+	letter-spacing: -1em;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
 
+#work-info dt {
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: 0.02em;
+	width: 10%;
+}
 
-
+#work-info dd {
+	display: inline-block;
+	vertical-align: top;
+	letter-spacing: 0.02em;
+}
 
 
 
